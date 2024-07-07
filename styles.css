@@ -1,0 +1,244 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base font and background settings */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Container settings */
+.container {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Header and navigation styling */
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    float: left;
+    font-size: 1.5rem;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+header .nav-links li {
+    margin-left: 20px;
+}
+
+header .nav-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header .nav-links a.active {
+    border-bottom: 2px solid #fff;
+}
+
+header .mobile-menu-btn {
+    display: none;
+}
+
+/* Main section styling */
+main {
+    padding: 2rem 0;
+    margin-top: 80px; /* Adjusted for fixed header */
+}
+
+main section {
+    padding: 2rem 0;
+    border-bottom: 1px solid #ddd;
+}
+
+main section h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+main .btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.profile-pic, .about-pic {
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.home-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.home-text {
+    max-width: 600px;
+}
+
+/* Typewriter effect */
+.typewriter {
+    display: inline-block;
+    overflow: hidden;
+    border-right: .15em solid #333;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #333; }
+}
+
+/* About section styling */
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.about-content p {
+    max-width: 600px;
+}
+
+/* Services styling */
+.services-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.services-list li {
+    flex: 1 1 45%;
+    margin: 1rem 0;
+    font-size: 1.2rem;
+}
+
+.services-list li i {
+    margin-right: 10px;
+    color: #333;
+}
+
+/* Project grid styling */
+.project-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1rem;
+    margin: 1rem 0;
+    width: calc(33.333% - 2rem);
+    text-align: center;
+}
+
+.project-card img {
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 1rem;
+}
+
+.project-card h3 {
+    margin-bottom: 0.5rem;
+}
+
+/* Contact form styling */
+#contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact-form input,
+#contact-form textarea {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Footer styling */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+footer .social-icons a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    header .mobile-menu-btn {
+        display: block;
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    header .nav-links {
+        display: none;
+        flex-direction: column;
+    }
+
+    header .nav-links.active {
+        display: flex;
+    }
+
+    .home-content, .about-content {
+        flex-direction: column;
+    }
+
+    .project-card {
+        width: 100%;
+    }
+}
